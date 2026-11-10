@@ -1,17 +1,47 @@
 [[models]]
 provider = "mistral"
-alias = "mistral-large-4-0-3"
+alias = "Mistral Large 4"
 name = "mistral-large-4"
+input_price = 0.595
+cached_input_price = 0.0595
+output_price = 1.785
 thinking = "high"
+auto_compact_threshold = 800000
+max_context_length = 1000000
+max_output_tokens = 262144
 
 [[models]]
 provider = "mistral"
-alias = "glm-5-3"
+alias = "GLM 5.3 (Mistral Hosted)"
 name = "zai-glm-5-3"
+input_price = 1.19
+cached_input_price = 0.119
+output_price = 3.74
 thinking = "high"
+auto_compact_threshold = 800000
+max_context_length = 1000000
+max_output_tokens = 128000
 
 [[models]]
 provider = "mistral"
 alias = "Deepseek V4.1 Flash"
 name = "deepseek-v4-1-flash-1017"
+input_price = 0.255
+cached_input_price = 0.00595
+output_price = 1.02
 thinking = "high"
+auto_compact_threshold = 800000
+max_context_length = 1000000
+max_output_tokens = 128000
+
+[[models]]
+provider = "mistral"
+alias = "GLM 5.3 Flash (Mistral Hosted)"
+name = "zai-glm-5-3-flash"
+input_price = 0.1275
+cached_input_price = 0.0255
+output_price = 0.425
+thinking = "high"
+auto_compact_threashold = 800000
+max_content_length = 1000000
+max_output_tokens = 128000
