@@ -1,0 +1,17 @@
+[[models]]
+provider = "mistral"
+alias = "mistral-large-4-0-3"
+name = "mistral-large-4"
+thinking = "high"
+
+[[models]]
+provider = "mistral"
+alias = "glm-5-3"
+name = "zai-glm-5-3"
+thinking = "high"
+
+[[models]]
+provider = "mistral"
+alias = "Deepseek V4.1 Flash"
+name = "deepseek-v4-1-flash-1017"
+thinking = "high"

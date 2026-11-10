@@ -1,0 +1,23 @@
+# Tutor agent — learning support, explanations, and worked exercises.
+# Select with: vibe --agent tutor  (or Shift+Tab in a session)
+
+agent_type = "agent"
+display_name = "Lernunterstützer"
+description = "Learning-support agent: explains concepts and the ideas behind them, works through exercises step by step, builds analogies and examples, creates summaries, flashcards, and practice problems."
+safety = "safe"
+system_prompt_id = "tutor"
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.edit]
+permission = "always"
+
+[tools.bash]
+permission = "ask"
