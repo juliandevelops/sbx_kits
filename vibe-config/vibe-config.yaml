@@ -33,6 +33,10 @@ capabilities:
                   cp -r "$SEED/$d/." "$TARGET/$d/"
                 fi
               done
+              git config --system user.signingKey "key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP+bScsrNdi59KU27bRTswiSUwIMF06hw1NqIou2Wrgn juliandevelops-agent-sign"
+              mkdir -p /home/agent/.config/git
+              printf '%s %s\n' "professional@juliandevelops.com" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP+bScsrNdi59KU27bRTswiSUwIMF06hw1NqIou2Wrgn juliandevelops-agent-sign" > /home/agent/.config/git/allowed_signers
+              chown -R agent:agent /home/agent/.config/git
               chown -R agent:agent "$TARGET"
           user: "0"
           description: Seed ~/.vibe from the baked seed after the volume mounts
