@@ -42,6 +42,6 @@ input_price = 0.1275
 cached_input_price = 0.0255
 output_price = 0.425
 thinking = "high"
-auto_compact_threashold = 800000
+auto_compact_threshold = 800000
 max_content_length = 1000000
 max_output_tokens = 128000
