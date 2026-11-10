@@ -36,3 +36,5 @@ capabilities:
               chown -R agent:agent "$TARGET"
           user: "0"
           description: Seed ~/.vibe from the baked seed after the volume mounts
+  - type: comd.docker.sandbox/git-identity@1
+    description: Commit-Identify from host
