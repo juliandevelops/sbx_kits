@@ -1,0 +1,25 @@
+#syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+displayName: Rust toolchain
+description: >-
+  Rust toolchain as a mixin: rustup installed system-wide under /usr/local,
+  with the cargo shims linked into /usr/local/bin so no PATH setup is needed.
+licenses: [Apache-2.0]
+kind: mixin
+
+args:
+  version:
+    default: "stable"
+    description: Rust toolchain to install (rustup toolchain name)
+    buildArg: RUST_VERSION
+
+capabilities:
+  - type: com.docker.sandbox/network-policy@1
+    config:
+      runtime:
+        allow:
+          - static.rust-lang.org
+          - sh.rustup.rs
+          - index.crates.io
+          - static.crates.io
+          - crates.io

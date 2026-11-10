@@ -1,0 +1,38 @@
+#syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+displayName: Vibe config seeding
+description: >-
+  Seeds config.toml, agents, prompts and skills into ~/.vibe at every sandbox
+  start, from the seed tree baked into this overlay.
+licenses: [Apache-2.0]
+kind: mixin
+requires: ["vibe"]
+provides: ["vibe-config@0.1.0"]
+version: "0.1.0"
+
+capabilities:
+  - type: com.docker.sandbox/lifecycle@1
+    config:
+      startup:
+        - command:
+            - sh
+            - -c
+            - |
+              set -eu
+              SEED=/usr/share/vibe-seed
+              TARGET=/home/agent/.vibe
+              [ -d "$SEED" ] || exit 0
+              mkdir -p "$TARGET"
+              if [ -f "$SEED/config.toml" ] && [ ! -f "$TARGET/config.toml" ]; then
+                cp "$SEED/config.toml" "$TARGET/config.toml"
+              fi
+              for d in agents prompts skills; do
+                if [ -d "$SEED/$d" ]; then
+                  rm -rf "$TARGET/$d"
+                  mkdir -p "$TARGET/$d"
+                  cp -r "$SEED/$d/." "$TARGET/$d/"
+                fi
+              done
+              chown -R agent:agent "$TARGET"
+          user: "0"
+          description: Seed ~/.vibe from the baked seed after the volume mounts
