@@ -24,7 +24,7 @@ max_output_tokens = 128000
 
 [[models]]
 provider = "mistral"
-alias = "Deepseek V4.1 Flash"
+alias = "Deepseek V4.1 Flash (Mistral Hosted)"
 name = "deepseek-v4-1-flash-1017"
 input_price = 0.255
 cached_input_price = 0.00595
