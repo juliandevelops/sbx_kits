@@ -9,6 +9,7 @@ ARG RUST_VERSION=stable
 USER root
 
 ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo
+ENV PATH="/usr/local/cargo/bin:${PATH}"
 
 # C toolchain: the template carries no compiler, and rustc calls the system
 # cc at link time. Record the package set before/after so the overlay stages
