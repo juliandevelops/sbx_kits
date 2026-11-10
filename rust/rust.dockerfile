@@ -5,6 +5,9 @@
 ARG BASE_IMAGE=docker/sandbox-templates:shell-docker
 FROM ${BASE_IMAGE} AS build
 ARG RUST_VERSION=stable
+
+USER root
+
 ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo
 
 # C toolchain: the template carries no compiler, and rustc calls the system
