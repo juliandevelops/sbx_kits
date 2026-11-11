@@ -1,0 +1,23 @@
+# Purple team agent — validating detections against simulated attacks.
+# Select with: vibe --agent purpleteam  (or Shift+Tab in a session)
+
+agent_type = "agent"
+display_name = "Purple Team"
+description = "Purple team agent bridging red and blue: maps findings to MITRE ATT&CK, designs attack-detection tests, validates detection rules against simulated adversary behavior, and produces detection-gap reports."
+safety = "neutral"
+system_prompt_id = "purpleteam"
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.edit]
+permission = "always"
+
+[tools.bash]
+permission = "ask"

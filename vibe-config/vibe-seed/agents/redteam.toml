@@ -1,0 +1,23 @@
+# Red team agent — adversary emulation, attack paths, and exploitation.
+# Select with: vibe --agent redteam  (or Shift+Tab in a session)
+
+agent_type = "agent"
+display_name = "Red Team"
+description = "Red team agent for adversary emulation and offensive security: attack planning, MITRE ATT&CK mapping, exploitation, C2/persistence concepts, and red-team reporting — for authorized engagements, labs, and CTFs."
+safety = "destructive"
+system_prompt_id = "redteam"
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.edit]
+permission = "always"
+
+[tools.bash]
+permission = "ask"

@@ -1,0 +1,23 @@
+# Blue team agent — detection, defense, and incident response.
+# Select with: vibe --agent blueteam  (or Shift+Tab in a session)
+
+agent_type = "agent"
+display_name = "Blue Team"
+description = "Blue team agent for defensive security: log analysis, incident response, detection engineering (Sigma, Suricata, YARA), threat hunting, hardening, and forensics."
+safety = "safe"
+system_prompt_id = "blueteam"
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.edit]
+permission = "always"
+
+[tools.bash]
+permission = "ask"
