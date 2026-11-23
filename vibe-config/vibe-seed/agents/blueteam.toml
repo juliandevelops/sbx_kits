@@ -4,20 +4,10 @@
 agent_type = "agent"
 display_name = "Blue Team"
 description = "Blue team agent for defensive security: log analysis, incident response, detection engineering (Sigma, Suricata, YARA), threat hunting, hardening, and forensics."
-safety = "safe"
 system_prompt_id = "blueteam"
-
-[tools.read_file]
-permission = "always"
-
-[tools.grep]
-permission = "always"
-
-[tools.write_file]
-permission = "always"
-
-[tools.edit]
-permission = "always"
+active_model = "mistral-large-4-0-3"
+enabled_skills = ["security-audit"]
+disabled_tools = ["connector_*"]
 
 [tools.bash]
 permission = "ask"

@@ -4,20 +4,10 @@
 agent_type = "agent"
 display_name = "Purple Team"
 description = "Purple team agent bridging red and blue: maps findings to MITRE ATT&CK, designs attack-detection tests, validates detection rules against simulated adversary behavior, and produces detection-gap reports."
-safety = "neutral"
 system_prompt_id = "purpleteam"
-
-[tools.read_file]
-permission = "always"
-
-[tools.grep]
-permission = "always"
-
-[tools.write_file]
-permission = "always"
-
-[tools.edit]
-permission = "always"
+active_model = "mistral-large-4-0-3"
+enabled_skills = ["security-audit"]
+disabled_tools = ["connector_*"]
 
 [tools.bash]
 permission = "ask"
