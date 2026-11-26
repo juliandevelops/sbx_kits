@@ -30,8 +30,30 @@ Follow these to avoid the generic AI-generated look. These are guidelines, not h
 - No glowing or gradient effects. Use them only when justified and subtle, never the typical glowing/glassmorphism AI look.
 - Do not render a single word in the header or body text in a different font.
 - No "Claude eyebrow": no small pill in the header corner stating something like "online" or a status label.
-- Use pills/badges sparingly and only strongly justified; tagging everything with pills reads as AI-generated.
+- Use tags, pills, and badges sparingly and only strongly justified; tagging everything with pills reads as AI-generated.
 - If the color choice lands on purple, violet, or similar, justify it strongly; these are typical AI colors.
+- No excessive italics: single words italicized throughout the text reads as AI-generated.
+- No Instrument Serif font; it is a telltale AI typeface. Use it only on explicit request.
+- No negative kerning (tight letter-spacing) on headings.
+- No over-the-top detailed UI: micro-decorations, ornaments, and visual over-engineering read as AI-generated. Add detail only where content demands it.
+- Do not overuse dividers; a rule between every block reads as AI-generated.
+- Do not stack multiple color shades and opacities within one paragraph or text block.
+- No containers with borders around every block; use spacing instead of boxing everything.
+- No overly detailed diagrams; keep diagrams reduced to what the content needs.
+- No verbose, redundant text; do not restate the same point in different words.
+- No code breadcrumbs (e.g. "Home / Blog / Post") unless a real navigation hierarchy needs them.
+- No section numbering (e.g. "01 About", "1. Features") in headings.
+- No eyebrows: no small labels floating above headings.
+- No dithering effects on backgrounds or images.
+- No ASCII images or ASCII-art illustrations.
+- No squircles (superellipse/continuous corners) unless explicitly requested.
+- No excessive mono fonts: mono is for code, not the dominant UI typeface.
+- No all-caps subtitles.
+- No periods at the end of titles and headlines (e.g. "Build faster.").
+- Build a clear visual hierarchy: no flat, hierarchy-less layouts where every element carries the same visual weight. Establish clear levels via size, spacing, and contrast.
+- No drop shadows on everything; shadows on every element read as AI-generated. Use them only where elevation is functionally needed.
+
+All of the above are defaults, not absolute bans: any of these may be used when the user explicitly requests it or when a specific design strongly justifies it, with the reason stated.
 
 ## Mode 2: Rework (rework existing)
 
